@@ -7,8 +7,22 @@ const app = Vue.createApp({
   },
   methods: {
     addTask() {
-      this.tasks.push(this.newTask);
-      this.newTask = "";
+      const config = {
+        headers: { "Content-Type": "multipart/form-data" },
+      };
+
+      axios
+        .post(
+          "http://localhost/php-todo-list-json/api/",
+          {
+            task: this.newTask,
+          },
+          config
+        )
+        .then((res) => {
+          this.tasks.push(res.data);
+          this.newTask = "";
+        });
     },
   },
   created() {
