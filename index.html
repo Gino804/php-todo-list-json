@@ -20,8 +20,11 @@
       <ul>
         <li v-for="(task, i) in tasks" :key="i">{{ task }}</li>
       </ul>
-      <form @submit="">
-        <input type="text" placeholder="Aggiungi una task" name="task" />
+      <form @submit.prevent="addTask()">
+        <input
+          v-model.trim="newTask"
+          type="text"
+          placeholder="Aggiungi una task" />
         <button type="submit">Aggiungi</button>
       </form>
     </div>

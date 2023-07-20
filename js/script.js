@@ -5,6 +5,12 @@ const app = Vue.createApp({
       newTask: "",
     };
   },
+  methods: {
+    addTask() {
+      this.tasks.push(this.newTask);
+      this.newTask = "";
+    },
+  },
   created() {
     axios.get("http://localhost/php-todo-list-json/api/").then((res) => {
       this.tasks = res.data;
