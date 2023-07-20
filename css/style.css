@@ -1,0 +1,53 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Generics */
+
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+ul > li {
+  padding: 15px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+
+input {
+  border: none;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  background-color: lime;
+  cursor: pointer;
+  padding: 0 7px;
+}
